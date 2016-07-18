@@ -1,0 +1,38 @@
+<idea-plugin version="2">
+    <id>de.lukweb.fastartifact.FastArtifact</id>
+    <name>FastArtifact</name>
+    <version>1.0</version>
+    <vendor email="luk.bukkit@gmail.com" url="http://www.lukweb.de">LukWeb</vendor>
+
+    <description><![CDATA[
+      With FastArtifact you can quickly create artifacts for modules. <br/>
+      This is very useful: In case you've got a project with very many modules and you often close or add them, you'll
+      have to add an artifact every time. Using FastArtifact you only have to click one button to create an artifact. <br/>
+
+    ]]></description>
+
+    <change-notes><![CDATA[
+      First version
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="143.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="fast_artifact" class="de.lukweb.fastartifact.actions.CreateArtifact" text="Fast Artifact">
+            <add-to-group group-id="BuildMenu" anchor="after" relative-to-action="BuildArtifact"/>
+        </action>
+    </actions>
+
+</idea-plugin>
